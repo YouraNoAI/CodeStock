@@ -95,10 +95,10 @@ export default function UserDashboard() {
     const now = new Date();
     const diffDays = Math.round((dueDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
     
-    if (diffDays === 0) return 'Due today';
-    if (diffDays === 1) return 'Due tomorrow';
-    if (diffDays > 1) return `Due in ${diffDays} days`;
-    return 'Past due';
+    if (diffDays === 0) return 'Jatuh tempo hari ini';
+    if (diffDays === 1) return 'Jatuh tempo besok';
+    if (diffDays > 1) return `Jatuh tempo dalam ${diffDays} hari`;
+    return 'Lewat jatuh tempo';
   };
 
   return (
@@ -198,7 +198,7 @@ export default function UserDashboard() {
                   )}
                   
                   {(!userAwards || userAwards.length === 0) && (
-                    <p className="text-sm text-gray-500 ml-2">No awards yet. Keep learning!</p>
+                    <p className="text-sm text-gray-500 ml-2">Belum ada penghargaan. Terus belajar!</p>
                   )}
                 </div>
               )}
@@ -259,7 +259,7 @@ export default function UserDashboard() {
                     </div>
                     <div className="flex-shrink-0">
                       <Button size="sm" variant={hasSubmitted ? "outline" : "default"}>
-                        {hasSubmitted ? 'View' : 'Start'}
+                        {hasSubmitted ? 'Lihat' : 'Mulai'}
                       </Button>
                     </div>
                   </div>
@@ -312,7 +312,7 @@ export default function UserDashboard() {
                       <div className="mt-2 flex items-center text-xs text-gray-500">
                         <span>{material.category}</span>
                         <span className="mx-2">•</span>
-                        <span>{material.readTime} minutes read</span>
+                        <span>{material.readTime} menit membaca</span>
                       </div>
                     </div>
                     <Badge variant="outline" className="ml-2">
