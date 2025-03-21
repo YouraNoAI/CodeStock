@@ -16,14 +16,14 @@ export default function AdminLayout({ children, title }: AdminLayoutProps) {
   const [location] = useLocation();
 
   const navigation = [
-    { name: "Dashboard", href: "/admin" },
-    { name: "Manage Pages", href: "/admin/pages" },
-    { name: "Grading System", href: "/admin/grades" },
-    { name: "Assignments", href: "/admin/assignments" },
-    { name: "Awards", href: "/admin/awards" },
-    { name: "User Management", href: "/admin/users" },
-    { name: "User Monitoring", href: "/admin/monitoring" },
-    { name: "Statistics", href: "/admin/statistics" },
+    { name: "Dasbor", href: "/admin" },
+    { name: "Kelola Halaman", href: "/admin/pages" },
+    { name: "Sistem Penilaian", href: "/admin/grades" },
+    { name: "Tugas", href: "/admin/assignments" },
+    { name: "Penghargaan", href: "/admin/awards" },
+    { name: "Manajemen Pengguna", href: "/admin/users" },
+    { name: "Pemantauan Pengguna", href: "/admin/monitoring" },
+    { name: "Statistik", href: "/admin/statistics" },
   ];
 
   const isActive = (path: string) => {
@@ -39,7 +39,7 @@ export default function AdminLayout({ children, title }: AdminLayoutProps) {
             <h1 className="text-2xl font-bold text-gray-800">
               Code<span className="text-primary">Stock</span>
             </h1>
-            <p className="text-sm text-gray-600">Admin Dashboard</p>
+            <p className="text-sm text-gray-600">Dasbor Admin</p>
           </div>
 
           <nav className="flex-1 p-4 space-y-1 overflow-y-auto">
@@ -76,7 +76,7 @@ export default function AdminLayout({ children, title }: AdminLayoutProps) {
               className="mt-4 w-full text-gray-600"
               onClick={() => logoutMutation.mutate()}
             >
-              Log Out
+              Keluar
             </Button>
           </div>
         </div>
@@ -100,7 +100,7 @@ export default function AdminLayout({ children, title }: AdminLayoutProps) {
         <div className="fixed inset-0 z-20 bg-black bg-opacity-50 md:hidden">
           <div className="bg-white w-64 min-h-screen overflow-y-auto p-4">
             <div className="flex justify-between items-center mb-6">
-              <h2 className="text-lg font-bold text-gray-800">Admin Menu</h2>
+              <h2 className="text-lg font-bold text-gray-800">Menu Admin</h2>
               <button
                 className="p-2 rounded-md text-gray-600 hover:bg-gray-100"
                 onClick={() => setMobileMenuOpen(false)}
@@ -147,7 +147,7 @@ export default function AdminLayout({ children, title }: AdminLayoutProps) {
                   logoutMutation.mutate();
                 }}
               >
-                Log Out
+                Keluar
               </Button>
             </div>
           </div>
@@ -163,7 +163,7 @@ export default function AdminLayout({ children, title }: AdminLayoutProps) {
             <div className="relative">
               <Input 
                 type="text" 
-                placeholder="Search..." 
+                placeholder="Cari..." 
                 className="w-64 pl-10" 
               />
               <div className="absolute left-3 top-2.5 text-gray-400">

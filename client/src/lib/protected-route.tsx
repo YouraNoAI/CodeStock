@@ -29,7 +29,7 @@ export function ProtectedRoute({
     );
   }
 
-  // Check if admin paths are being accessed by non-admins
+  // Periksa apakah jalur admin diakses oleh non-admin
   if (path.startsWith("/admin") && !isAdmin) {
     return (
       <Route path={path}>

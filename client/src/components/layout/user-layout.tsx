@@ -16,12 +16,12 @@ export default function UserLayout({ children, title }: UserLayoutProps) {
   const [location] = useLocation();
 
   const navigation = [
-    { name: "Dashboard", href: "/" },
-    { name: "Learning Materials", href: "/materials" },
-    { name: "Assignments", href: "/assignments" },
-    { name: "My Grades", href: "/grades" },
-    { name: "My Awards", href: "/awards" },
-    { name: "My Profile", href: "/profile" },
+    { name: "Dasbor", href: "/" },
+    { name: "Materi Pembelajaran", href: "/materials" },
+    { name: "Tugas", href: "/assignments" },
+    { name: "Nilai Saya", href: "/grades" },
+    { name: "Penghargaan Saya", href: "/awards" },
+    { name: "Profil Saya", href: "/profile" },
   ];
 
   const isActive = (path: string) => {
@@ -37,7 +37,7 @@ export default function UserLayout({ children, title }: UserLayoutProps) {
             <h1 className="text-2xl font-bold text-gray-800">
               Code<span className="text-primary">Stock</span>
             </h1>
-            <p className="text-sm text-gray-600">Learning Platform</p>
+            <p className="text-sm text-gray-600">Platform Pembelajaran</p>
           </div>
 
           <nav className="flex-1 p-4 space-y-1 overflow-y-auto">
@@ -66,7 +66,7 @@ export default function UserLayout({ children, title }: UserLayoutProps) {
               </div>
               <div>
                 <p className="text-sm font-medium text-gray-800">{user?.username}</p>
-                <p className="text-xs text-gray-500">Student</p>
+                <p className="text-xs text-gray-500">Pelajar</p>
               </div>
             </div>
             <Button
@@ -74,7 +74,7 @@ export default function UserLayout({ children, title }: UserLayoutProps) {
               className="mt-4 w-full text-gray-600"
               onClick={() => logoutMutation.mutate()}
             >
-              Log Out
+              Keluar
             </Button>
           </div>
         </div>
@@ -134,7 +134,7 @@ export default function UserLayout({ children, title }: UserLayoutProps) {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-gray-800">{user?.username}</p>
-                  <p className="text-xs text-gray-500">Student</p>
+                  <p className="text-xs text-gray-500">Pelajar</p>
                 </div>
               </div>
               <Button
@@ -145,7 +145,7 @@ export default function UserLayout({ children, title }: UserLayoutProps) {
                   logoutMutation.mutate();
                 }}
               >
-                Log Out
+                Keluar
               </Button>
             </div>
           </div>
@@ -161,7 +161,7 @@ export default function UserLayout({ children, title }: UserLayoutProps) {
             <div className="relative">
               <Input 
                 type="text" 
-                placeholder="Search materials..." 
+                placeholder="Cari materi..." 
                 className="w-64 pl-10" 
               />
               <div className="absolute left-3 top-2.5 text-gray-400">
