@@ -158,7 +158,7 @@ export default function UserProfile() {
   const recentActivities = getRecentActivities();
 
   return (
-    <UserLayout title="My Profile">
+    <UserLayout title="Profil Saya">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* User Profile Card */}
         <Card className="lg:col-span-1">
@@ -173,7 +173,7 @@ export default function UserProfile() {
             <CardTitle className="text-xl">{user?.username}</CardTitle>
             <CardDescription className="flex justify-center gap-2 mt-1">
               <Badge variant="outline" className="bg-blue-100 text-blue-800">
-                Student
+                Pelajar
               </Badge>
               <Badge variant="outline">ID: {user?.userId}</Badge>
             </CardDescription>
@@ -183,7 +183,7 @@ export default function UserProfile() {
               <div className="flex items-center">
                 <Calendar className="h-4 w-4 text-gray-500 mr-2" />
                 <span className="text-sm text-gray-600">
-                  Joined {new Date(user?.createdAt).toLocaleDateString()}
+                  Bergabung {new Date(user?.createdAt).toLocaleDateString()}
                 </span>
               </div>
               
@@ -193,7 +193,7 @@ export default function UserProfile() {
                   {isLoading ? (
                     <Skeleton className="h-4 w-32 inline-block" />
                   ) : (
-                    `${stats.learningHours} hours of learning content`
+                    `${stats.learningHours} jam konten pembelajaran`
                   )}
                 </span>
               </div>
@@ -204,7 +204,7 @@ export default function UserProfile() {
                   {isLoading ? (
                     <Skeleton className="h-4 w-32 inline-block" />
                   ) : (
-                    `${stats.completedAssignments} assignments completed`
+                    `${stats.completedAssignments} tugas diselesaikan`
                   )}
                 </span>
               </div>
@@ -215,7 +215,7 @@ export default function UserProfile() {
                   {isLoading ? (
                     <Skeleton className="h-4 w-32 inline-block" />
                   ) : (
-                    `${stats.totalAwards} awards earned`
+                    `${stats.totalAwards} penghargaan diterima`
                   )}
                 </span>
               </div>
