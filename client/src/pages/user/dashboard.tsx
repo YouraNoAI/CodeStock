@@ -102,7 +102,7 @@ export default function UserDashboard() {
   };
 
   return (
-    <UserLayout title="Dashboard">
+    <UserLayout title="Dasbor">
       {/* Overview Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
         <Card>
@@ -112,7 +112,7 @@ export default function UserDashboard() {
                 <FileCheck className="h-6 w-6 text-primary" />
               </div>
               <div className="ml-5">
-                <p className="text-gray-500 text-sm">Completed Assignments</p>
+                <p className="text-gray-500 text-sm">Tugas Selesai</p>
                 {isLoadingSubmissions || isLoadingAssignments ? (
                   <Skeleton className="h-7 w-20 mt-1" />
                 ) : (
@@ -139,7 +139,7 @@ export default function UserDashboard() {
                 <GraduationCap className="h-6 w-6 text-secondary" />
               </div>
               <div className="ml-5">
-                <p className="text-gray-500 text-sm">Average Grade</p>
+                <p className="text-gray-500 text-sm">Nilai Rata-rata</p>
                 {isLoadingSubmissions ? (
                   <Skeleton className="h-7 w-20 mt-1" />
                 ) : (
@@ -166,7 +166,7 @@ export default function UserDashboard() {
                 <Award className="h-6 w-6 text-amber-500" />
               </div>
               <div className="ml-5">
-                <p className="text-gray-500 text-sm">Awards Earned</p>
+                <p className="text-gray-500 text-sm">Penghargaan Diterima</p>
                 {isLoadingAwards ? (
                   <Skeleton className="h-7 w-20 mt-1" />
                 ) : (
@@ -211,12 +211,12 @@ export default function UserDashboard() {
       <Card className="mb-8">
         <CardHeader className="flex flex-row items-center justify-between pb-2">
           <div>
-            <CardTitle className="text-lg font-semibold">Current Assignments</CardTitle>
-            <CardDescription>Your upcoming work</CardDescription>
+            <CardTitle className="text-lg font-semibold">Tugas Saat Ini</CardTitle>
+            <CardDescription>Pekerjaan mendatang Anda</CardDescription>
           </div>
           <Button variant="outline" size="sm" asChild>
             <a href="/assignments">
-              View All <ArrowRight className="h-4 w-4 ml-1" />
+              Lihat Semua <ArrowRight className="h-4 w-4 ml-1" />
             </a>
           </Button>
         </CardHeader>
@@ -229,7 +229,7 @@ export default function UserDashboard() {
             </div>
           ) : getUpcomingAssignments().length === 0 ? (
             <div className="text-center py-8">
-              <p className="text-gray-500">No upcoming assignments.</p>
+              <p className="text-gray-500">Tidak ada tugas mendatang.</p>
             </div>
           ) : (
             <div className="space-y-4">
@@ -274,12 +274,12 @@ export default function UserDashboard() {
       <Card>
         <CardHeader className="flex flex-row items-center justify-between pb-2">
           <div>
-            <CardTitle className="text-lg font-semibold">Recent Learning Materials</CardTitle>
-            <CardDescription>Latest educational content</CardDescription>
+            <CardTitle className="text-lg font-semibold">Materi Pembelajaran Terbaru</CardTitle>
+            <CardDescription>Konten pendidikan terkini</CardDescription>
           </div>
           <Button variant="outline" size="sm" asChild>
             <a href="/materials">
-              Browse All <ArrowRight className="h-4 w-4 ml-1" />
+              Jelajahi Semua <ArrowRight className="h-4 w-4 ml-1" />
             </a>
           </Button>
         </CardHeader>
@@ -292,7 +292,7 @@ export default function UserDashboard() {
             </div>
           ) : getRecentMaterials().length === 0 ? (
             <div className="text-center py-8">
-              <p className="text-gray-500">No learning materials available.</p>
+              <p className="text-gray-500">Tidak ada materi pembelajaran tersedia.</p>
             </div>
           ) : (
             <div className="space-y-4">
