@@ -12,8 +12,8 @@ import { Loader2 } from "lucide-react";
 
 // Form validation schema
 const loginSchema = z.object({
-  username: z.string().min(1, "Username is required"),
-  password: z.string().min(1, "Password is required"),
+  username: z.string().min(1, "Username wajib diisi"),
+  password: z.string().min(1, "Password wajib diisi"),
 });
 
 export default function AuthPage() {
@@ -64,11 +64,11 @@ export default function AuthPage() {
               <h1 className="text-3xl font-bold text-gray-800">
                 Code<span className="text-primary">Stock</span>
               </h1>
-              <p className="text-gray-600 mt-2">Learning Materials Repository</p>
+              <p className="text-gray-600 mt-2">Repositori Materi Pembelajaran</p>
             </div>
 
             <div className="w-full">
-              <h2 className="text-2xl font-semibold text-center mb-6">Sign In</h2>
+              <h2 className="text-2xl font-semibold text-center mb-6">Masuk</h2>
               
               {/* Login Form */}
               <div className="space-y-6">
@@ -79,9 +79,9 @@ export default function AuthPage() {
                       name="username"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Username</FormLabel>
+                          <FormLabel>Nama Pengguna</FormLabel>
                           <FormControl>
-                            <Input {...field} placeholder="Enter your username" />
+                            <Input {...field} placeholder="Masukkan nama pengguna" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -93,13 +93,13 @@ export default function AuthPage() {
                       name="password"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Password</FormLabel>
+                          <FormLabel>Kata Sandi</FormLabel>
                           <FormControl>
                             <div className="relative">
                               <Input 
                                 type={showPassword ? "text" : "password"} 
                                 {...field} 
-                                placeholder="Enter your password" 
+                                placeholder="Masukkan kata sandi" 
                               />
                               <button 
                                 type="button" 
@@ -132,17 +132,17 @@ export default function AuthPage() {
                       {loginMutation.isPending ? (
                         <>
                           <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                          Signing In
+                          Sedang Masuk
                         </>
                       ) : (
-                        "Sign In"
+                        "Masuk"
                       )}
                     </Button>
                   </form>
                 </Form>
                 
                 <p className="text-center text-gray-500 text-sm mt-6">
-                  New users need to be registered by an administrator.
+                  Pengguna baru harus didaftarkan oleh administrator.
                 </p>
               </div>
             </div>
@@ -152,9 +152,9 @@ export default function AuthPage() {
         {/* Hero Section */}
         <div className="hidden md:flex flex-col justify-center items-center p-8 bg-gradient-to-br from-primary to-blue-700 text-white">
           <div className="max-w-md text-center">
-            <h2 className="text-3xl font-bold mb-4">Welcome to CodeStock</h2>
+            <h2 className="text-3xl font-bold mb-4">Selamat Datang di CodeStock</h2>
             <p className="text-lg mb-6">
-              Your comprehensive learning management platform for educational content, assignments, and performance tracking.
+              Platform manajemen pembelajaran komprehensif untuk konten pendidikan, tugas, dan pelacakan kinerja.
             </p>
             <div className="space-y-4">
               <div className="flex items-center">
@@ -163,7 +163,7 @@ export default function AuthPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
                 </div>
-                <p className="text-sm">Access structured learning materials</p>
+                <p className="text-sm">Akses materi pembelajaran terstruktur</p>
               </div>
               <div className="flex items-center">
                 <div className="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center mr-3">
@@ -171,7 +171,7 @@ export default function AuthPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                   </svg>
                 </div>
-                <p className="text-sm">Submit and track assignments</p>
+                <p className="text-sm">Kirim dan lacak tugas</p>
               </div>
               <div className="flex items-center">
                 <div className="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center mr-3">
@@ -179,7 +179,7 @@ export default function AuthPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                   </svg>
                 </div>
-                <p className="text-sm">Earn awards for your achievements</p>
+                <p className="text-sm">Dapatkan penghargaan untuk prestasi Anda</p>
               </div>
             </div>
           </div>
